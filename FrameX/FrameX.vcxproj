@@ -150,6 +150,10 @@
     <ClInclude Include="src\FrameX\Application.h" />
     <ClInclude Include="src\FrameX\Core.h" />
     <ClInclude Include="src\FrameX\EntryPoint.h" />
+    <ClInclude Include="src\FrameX\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\FrameX\Events\Event.h" />
+    <ClInclude Include="src\FrameX\Events\KeyEvent.h" />
+    <ClInclude Include="src\FrameX\Events\MouseEvent.h" />
     <ClInclude Include="src\FrameX\Log.h" />
   </ItemGroup>
   <ItemGroup>

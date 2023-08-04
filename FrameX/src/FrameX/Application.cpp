@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Events/ApplicationEvent.h"
+#include "Log.h"
+
 namespace FrameX {
 	Application::Application()
 	{
@@ -8,7 +11,6 @@ namespace FrameX {
 
 	Application::~Application()
 	{
-
 	}
 
 	void Application::Run()

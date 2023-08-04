@@ -4,9 +4,11 @@
     <Filter Include="FrameX">
       <UniqueIdentifier>{08186EB3-F4B9-9889-DD74-ACDDC9B51FDA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FrameX\Events">
+      <UniqueIdentifier>{b38108d6-ba9d-4484-90b1-ca4c30a4b6cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\FrameX.h" />
     <ClInclude Include="src\FrameX\Application.h">
       <Filter>FrameX</Filter>
     </ClInclude>
@@ -18,6 +20,21 @@
     </ClInclude>
     <ClInclude Include="src\FrameX\Log.h">
       <Filter>FrameX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FrameX.h">
+      <Filter>FrameX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FrameX\Events\ApplicationEvent.h">
+      <Filter>FrameX\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FrameX\Events\Event.h">
+      <Filter>FrameX\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FrameX\Events\KeyEvent.h">
+      <Filter>FrameX\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FrameX\Events\MouseEvent.h">
+      <Filter>FrameX\Events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
