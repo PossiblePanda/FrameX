@@ -1,0 +1,3 @@
+[submodule "FrameX/vendor/spdlog"]
+	path = FrameX/vendor/spdlog
+	url = https://github.com/gabime/spdlog
