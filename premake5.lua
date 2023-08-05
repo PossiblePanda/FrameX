@@ -18,9 +18,6 @@ project "FrameX"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "FrameX/src/fxpch.h"
-	pchsource "FrameX/src/fxpch.cpp"
-
 	files
 	{
 		"%{prj.name}/src/**.h",

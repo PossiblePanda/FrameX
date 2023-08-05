@@ -2,6 +2,8 @@
 
 #include "Event.h"
 
+#include <sstream>
+
 namespace FrameX {
 
 	class FRAMEX_API WindowResizeEvent : public Event
