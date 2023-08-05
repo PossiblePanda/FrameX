@@ -35,6 +35,8 @@
       <Filter>FrameX</Filter>
     </ClInclude>
     <ClInclude Include="src\fxpch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\FrameX\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FrameX\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>FrameX</Filter>
     </ClCompile>
     <ClCompile Include="src\fxpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

@@ -10,6 +10,12 @@ workspace "FrameX"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution dir)
+IncludeDir = {}
+IncludeDir["GLFW"] = "FrameX/vendor/GLFW/include"
+
+include "FrameX/vendor/GLFW"
+
 project "FrameX"
 	location "FrameX"
 	kind "SharedLib"
@@ -26,7 +32,15 @@ project "FrameX"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -36,8 +50,9 @@ project "FrameX"
 
 		defines
 		{
-			"FX_PLATFORM_WINDOWS",
-			";FX_BUILD_DLL;"
+			"FX_PLATFORM_WINDOWS;",
+			";FX_BUILD_DLL;",
+			"FX_ENABLE_ASSERTS;"
 		}
 
 		postbuildcommands
