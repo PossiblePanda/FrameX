@@ -5,6 +5,7 @@
 #include <GLFW/glfw3.h>
 
 namespace FrameX {
+
 	class WindowsWindow : public Window
 	{
 	public:
