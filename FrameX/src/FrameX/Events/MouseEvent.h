@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace FrameX {
 
 	class FRAMEX_API MouseMovedEvent : public Event
@@ -35,7 +33,7 @@ namespace FrameX {
 			: m_XOffset(xOffset), m_YOffset(yOffset) {}
 
 		inline float GetXOffset() const { return m_XOffset; }
-		inline float GetYOffset() const { return M_YOffset; }
+		inline float GetYOffset() const { return m_YOffset; }
 
 		std::string ToString() const override
 		{

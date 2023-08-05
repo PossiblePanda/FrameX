@@ -5,10 +5,11 @@
       <UniqueIdentifier>{08186EB3-F4B9-9889-DD74-ACDDC9B51FDA}</UniqueIdentifier>
     </Filter>
     <Filter Include="FrameX\Events">
-      <UniqueIdentifier>{b38108d6-ba9d-4484-90b1-ca4c30a4b6cb}</UniqueIdentifier>
+      <UniqueIdentifier>{EC6A2725-582B-A35B-2166-ECD88DE5E737}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\FrameX.h" />
     <ClInclude Include="src\FrameX\Application.h">
       <Filter>FrameX</Filter>
     </ClInclude>
@@ -16,12 +17,6 @@
       <Filter>FrameX</Filter>
     </ClInclude>
     <ClInclude Include="src\FrameX\EntryPoint.h">
-      <Filter>FrameX</Filter>
-    </ClInclude>
-    <ClInclude Include="src\FrameX\Log.h">
-      <Filter>FrameX</Filter>
-    </ClInclude>
-    <ClInclude Include="src\FrameX.h">
       <Filter>FrameX</Filter>
     </ClInclude>
     <ClInclude Include="src\FrameX\Events\ApplicationEvent.h">
@@ -36,6 +31,10 @@
     <ClInclude Include="src\FrameX\Events\MouseEvent.h">
       <Filter>FrameX\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\FrameX\Log.h">
+      <Filter>FrameX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fxpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FrameX\Application.cpp">
@@ -44,5 +43,6 @@
     <ClCompile Include="src\FrameX\Log.cpp">
       <Filter>FrameX</Filter>
     </ClCompile>
+    <ClCompile Include="src\fxpch.cpp" />
   </ItemGroup>
 </Project>

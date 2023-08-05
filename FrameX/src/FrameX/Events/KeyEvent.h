@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace FrameX 
 {
 	class FRAMEX_API KeyEvent : public Event
