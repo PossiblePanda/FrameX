@@ -6,6 +6,8 @@
 
 #include "FrameX/Log.h"
 
+#include <glad/glad.h>
+
 namespace FrameX {
 	static bool s_GLFWInitialized = false;
 
@@ -43,12 +45,13 @@ namespace FrameX {
 			int success = glfwInit();
 			FX_CORE_ASSERT(success, "Could not intialize GLFW!");
 			glfwSetErrorCallback(GLFWErrorCallback);
-
-				s_GLFWInitialized = true;
+			s_GLFWInitialized = true;
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		FX_CORE_ASSERT(status, "Failed to initialize Glad!")
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

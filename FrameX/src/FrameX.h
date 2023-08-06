@@ -3,6 +3,7 @@
 // For use by FrameX Applications
 
 #include "FrameX/Application.h"
+#include "FrameX/Layer.h"
 #include "FrameX/Log.h"
 
 // ---------------Entry Point---------------

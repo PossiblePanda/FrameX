@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution dir)
 IncludeDir = {}
 IncludeDir["GLFW"] = "FrameX/vendor/GLFW/include"
+IncludeDir["Glad"] = "FrameX/vendor/Glad/include"
 
 include "FrameX/vendor/GLFW"
+include "FrameX/vendor/Glad"
 
 project "FrameX"
 	location "FrameX"
@@ -34,12 +36,14 @@ project "FrameX"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -50,9 +54,10 @@ project "FrameX"
 
 		defines
 		{
-			"FX_PLATFORM_WINDOWS;",
-			";FX_BUILD_DLL;",
-			"FX_ENABLE_ASSERTS;"
+			"FX_PLATFORM_WINDOWS",
+			"FX_BUILD_DLL",
+			"FX_ENABLE_ASSERTS",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -62,14 +67,17 @@ project "FrameX"
 
 	filter "configurations:Debug"
 		defines "FX_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "FX_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "FX_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"

@@ -5,6 +5,7 @@
 #include "Window.h"
 #include "Events/ApplicationEvent.h"
 #include <iostream>
+#include "FrameX/LayerStack.h"
 
 namespace FrameX {
 	class FRAMEX_API Application
@@ -16,14 +17,21 @@ namespace FrameX {
 		void Run();
 
 		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		LayerStack m_LayerStack;
 	};
 
 	// To be defined in CLIENT
 	Application* CreateApplication();
 
 }
+
+// Macros
+#define Start() FrameX::CreateApplication()

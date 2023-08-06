@@ -4,6 +4,8 @@
 
 #include <GLFW/glfw3.h>
 
+struct GLFWWindow;
+
 namespace FrameX {
 
 	class WindowsWindow : public Window

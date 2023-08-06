@@ -37,6 +37,12 @@
     <ClInclude Include="src\FrameX\Events\MouseEvent.h">
       <Filter>FrameX\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\FrameX\Layer.h">
+      <Filter>FrameX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FrameX\LayerStack.h">
+      <Filter>FrameX</Filter>
+    </ClInclude>
     <ClInclude Include="src\FrameX\Log.h">
       <Filter>FrameX</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FrameX\Application.cpp">
+      <Filter>FrameX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FrameX\Layer.cpp">
+      <Filter>FrameX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FrameX\LayerStack.cpp">
       <Filter>FrameX</Filter>
     </ClCompile>
     <ClCompile Include="src\FrameX\Log.cpp">
